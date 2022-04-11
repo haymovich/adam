@@ -36,7 +36,7 @@ def extractDataFromListToAutoAlias(listType: list):
 # ------- # Function -> gotoAdamFolder # ------- #
 def gotoAdamFolder():
     os.chdir(pathScriptFolder)
-    logger().printLog(0, f'Current Folder : {os.getcwd()}')
+    logger().printLog(0, f'Goto --> Current Folder : {os.getcwd()}')
 
 
 # ------- # Function -> argumentsHelpLocal # ------- #
@@ -1391,21 +1391,25 @@ if __name__ == '__main__':
         # force init diary file
         # -f : force install
         if sys.argv[1] == '-f':
+            gotoAdamFolder()
             Installer().finalResults(forceCreateDiaryInitTypeBool=True)
         # ------- # Caller -> -i # ------- #
         # install without any force
         # -i : install
         if sys.argv[1] == '-i':
+            gotoAdamFolder()
             Installer().finalResults()
         # ------- # Caller -> -ss # ------- #
         # search Item inside diary folder
         # -s : search diary
         if sys.argv[1] == '-s':
+            gotoAdamFolder()
             print(Interpertor().searchFileFolderInDiaryFile(
                 sys.argv[2], sys.argv[3::]))
         # ------- # Caller -> -su # ------- #
         # -su : search diary and update it with insert flag
         if sys.argv[1] == '-su':
+            gotoAdamFolder()
             Interpertor().searchFileFolderInDiaryFile(
                 sys.argv[2],
                 sys.argv[3::],
@@ -1416,16 +1420,19 @@ if __name__ == '__main__':
             Installer().flagReaderBasicPrintHelper(printOnlyNamedDialog=True)
         # [ extract path ]the path of the file/folder only and return it
         if sys.argv[1] == '-ep':
+            gotoAdamFolder()
             print(Interpertor().searchFileFolderInDiaryFile(
                 sys.argv[2], sys.argv[3::]))
         # ------- # Caller -> -epa # ------- #
         # [ extract path automatic]the path of the file/folder only and return it
         if sys.argv[1] == '-epa':
+            gotoAdamFolder()
             print(str(Interpertor().searchFileFolderInDiaryFile(
                 sys.argv[2], sys.argv[3::])).replace('python3', '').replace('python', '').strip())
         # ------- # Caller -> -c / -cr / -cu / -cru # ------- #
         if sys.argv[1] == '-c' or sys.argv[1] == '-cr' or sys.argv[1] == '-cu' or sys.argv[1] == '-cru':
             # chdir
+            gotoAdamFolder()
             getResultsFromAutoSearcher = Interpertor().searchFileFolderInDiaryFile(
                 'command.py', sys.argv[1::])
             print(logger().printColor(0, f'{printLine}'))
@@ -1441,6 +1448,8 @@ if __name__ == '__main__':
                 pass
             else:
                 scriptName = os.path.basename(getResultsFromAutoSearcher)
+                if str(scriptName).split(' ')[0] != 'git_manager.py':
+                    gotoAdamFolder()
                 scriptFlag = ''
                 if not sys.argv[2::]:
                     scriptFlag = 'None Script Flag Insert'

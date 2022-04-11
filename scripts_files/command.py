@@ -137,11 +137,11 @@ class CommandReadWriteManager():
         """
         # Check for base folder - exists or not
         if not os.path.exists(self.pathFolderForBaseCommandPartTwo):
-            logger().printLog(
-                f'Folder [{self.nameForBaseCommandFolder}] not exists , create it now.')
+            logger().printLog(2,
+                              f'Folder [{self.nameForBaseCommandFolder}] not exists , create it now.')
             os.system(f'sudo mkdir {self.pathFolderForBaseCommandPartTwo}')
             os.system(f'sudo chmod 777 {self.pathFolderForBaseCommandPartTwo}')
-            logger()(
+            logger().printLog(
                 1, f'Folder [{self.nameForBaseCommandFolder}] is created.')
         # check for default user
         # print(
