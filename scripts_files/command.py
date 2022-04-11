@@ -320,6 +320,7 @@ class CommandReadWriteManager():
             for commandOrder, commandValue in sorted(readJsonCommand[commandKeyToExecCaller].items()):
                 commandValue = self.seekCommandInsideAlias(
                     str(commandValue).strip())
+
                 logger().printLog(0,
                                   f'Caller Script : Init Command --> {commandOrder}.{commandValue}')
                 # replace the command ll
@@ -341,7 +342,10 @@ class CommandReadWriteManager():
                     if ';' in commandValue:
                         commandValueSplitter = commandValue.split(';')
                         for eachCommand in commandValueSplitter:
-                            os.chdir(eachCommand.strip())
+                            try:
+                                os.chdir(eachCommand.strip())
+                            except FileNotFoundError:
+                                pass
                     else:
                         os.chdir(commandValue)
                     logger().printLog(

@@ -1,0 +1,194 @@
+{
+  "folderMap": {
+    "app_gui": {
+      "mainPathFolder": "/Users/barhaymovich/adam/app_gui",
+      "subFilesFolder": {
+        "/Users/barhaymovich/adam/app_gui": []
+      }
+    },
+    "LICENSE": {
+      "mainPathFolder": "/Users/barhaymovich/adam/LICENSE",
+      "subFilesFolder": {}
+    },
+    "email_automation_main": {
+      "mainPathFolder": "/Users/barhaymovich/adam/email_automation_main",
+      "subFilesFolder": {
+        "/Users/barhaymovich/adam/email_automation_main": []
+      }
+    },
+    "scripts_files": {
+      "mainPathFolder": "/Users/barhaymovich/adam/scripts_files",
+      "subFilesFolder": {
+        "/Users/barhaymovich/adam/scripts_files": [
+          "command.py",
+          "git_manager.py",
+          "createAliasForAdamFramework.py",
+          "testScriptExample.py",
+          "logger.py",
+          "pyinstallerCreator.py"
+        ]
+      }
+    },
+    "logs": {
+      "mainPathFolder": "/Users/barhaymovich/adam/logs",
+      "subFilesFolder": {
+        "/Users/barhaymovich/adam/logs": [
+          "LogRunHistoryFiles",
+          "LogRunOutputFiles"
+        ],
+        "/Users/barhaymovich/adam/logs/LogRunHistoryFiles": [],
+        "/Users/barhaymovich/adam/logs/LogRunOutputFiles": []
+      }
+    },
+    "adam_files": {
+      "mainPathFolder": "/Users/barhaymovich/adam/adam_files",
+      "subFilesFolder": {
+        "/Users/barhaymovich/adam/adam_files": []
+      }
+    },
+    "json_files": {
+      "mainPathFolder": "/Users/barhaymovich/adam/json_files",
+      "subFilesFolder": {
+        "/Users/barhaymovich/adam/json_files": []
+      }
+    }
+  },
+  "folderMapLevel2": {
+    "app_gui": "/Users/barhaymovich/adam/app_gui",
+    "email_automation_main": "/Users/barhaymovich/adam/email_automation_main",
+    "scripts_files": "/Users/barhaymovich/adam/scripts_files",
+    "command.py": {
+      "path": "/Users/barhaymovich/adam/scripts_files/command.py",
+      "interpertor": "python3",
+      "flags": {
+        "-c": {
+          "flagName": "Execute command.",
+          "dateUpdateForFlag": "11-04-2022__18-16-00",
+          "sysArgsNeed": "True",
+          "QuickExample": "adam -c <AnyCommand>"
+        },
+        "-c -change": {
+          "flagName": "Execute command.",
+          "dateUpdateForFlag": "11-04-2022__18-16-00",
+          "sysArgsNeed": "True",
+          "QuickExample": "adam -c -change <AnyCommand>"
+        },
+        "-cr": {
+          "flagName": "Read the command.",
+          "dateUpdateForFlag": "11-04-2022__18-16-00",
+          "sysArgsNeed": "False",
+          "QuickExample": "adam -cr <Command Name To Read>"
+        },
+        "-cu": {
+          "flagName": "Run Command from specific user.",
+          "dateUpdateForFlag": "11-04-2022__18-16-00",
+          "sysArgsNeed": "True",
+          "QuickExample": "adam -cu <UserName> <CommandToExec>"
+        },
+        "-cru": {
+          "flagName": "Read Command from specific user.",
+          "dateUpdateForFlag": "11-04-2022__18-16-00",
+          "sysArgsNeed": "True",
+          "QuickExample": "adam -cru <UserName> <CommandToRead>"
+        }
+      }
+    },
+    "git_manager.py": {
+      "path": "/Users/barhaymovich/adam/scripts_files/git_manager.py",
+      "interpertor": "python3",
+      "flags": {
+        "-p": {
+          "flagName": "push to git automatic with the last know tag -> recommending when using git work flow.",
+          "dateUpdateForFlag": "11-04-2022__18-16-00",
+          "sysArgsNeed": "True",
+          "QuickExample": "adam git -p <What do push>"
+        },
+        "-nt": {
+          "flagName": "automatic release new tag to git [1=MAJOR/2=MINOR/3=PATCH --> release] -> recommending when using git work flow.",
+          "dateUpdateForFlag": "11-04-2022__18-16-00",
+          "sysArgsNeed": "True",
+          "QuickExample": "adam -nt <Type Of Push == 1/2/3> <What the release value>"
+        }
+      }
+    },
+    "createAliasForAdamFramework.py": {
+      "path": "/Users/barhaymovich/adam/scripts_files/createAliasForAdamFramework.py",
+      "interpertor": "python3",
+      "flags": {
+        "-p": {
+          "flagName": "Get the path for adam script , this step is automatic.",
+          "dateUpdateForFlag": "11-04-2022__18-16-00",
+          "sysArgsNeed": "True",
+          "QuickExample": "adam createAliasForAdamFramework.py -p <PathForAdamFolder>"
+        },
+        "-a": {
+          "flagName": "Insert new alias from adam framework -> Alias name && Alias Value.",
+          "dateUpdateForFlag": "11-04-2022__18-16-00",
+          "sysArgsNeed": "True",
+          "QuickExample": "adam createAliasForAdamFramework.py -a <AliasName> <Alias Value>"
+        }
+      }
+    },
+    "testScriptExample.py": {
+      "path": "/Users/barhaymovich/adam/scripts_files/testScriptExample.py",
+      "interpertor": "python3",
+      "flags": {}
+    },
+    "logger.py": {
+      "path": "/Users/barhaymovich/adam/scripts_files/logger.py",
+      "interpertor": "python3",
+      "flags": {}
+    },
+    "pyinstallerCreator.py": {
+      "path": "/Users/barhaymovich/adam/scripts_files/pyinstallerCreator.py",
+      "interpertor": "python3",
+      "flags": {}
+    },
+    "logs": "/Users/barhaymovich/adam/logs",
+    "LogRunHistoryFiles": "/Users/barhaymovich/adam/logs/LogRunHistoryFiles",
+    "LogRunOutputFiles": "/Users/barhaymovich/adam/logs/LogRunOutputFiles",
+    "adam_files": "/Users/barhaymovich/adam/adam_files",
+    "json_files": "/Users/barhaymovich/adam/json_files",
+    "adam.py": {
+      "path": "/Users/barhaymovich/adam/adam.py",
+      "interpertor": "python3",
+      "flags": {
+        "-i": {
+          "flagName": "install adam folder and mapping",
+          "dateUpdateForFlag": "11-04-2022__18-16-00",
+          "sysArgsNeed": "False",
+          "QuickExample": "adam.py -i"
+        },
+        "-f": {
+          "flagName": "force install adam folder and mapping",
+          "dateUpdateForFlag": "11-04-2022__18-16-00",
+          "sysArgsNeed": "False",
+          "QuickExample": "adam.py -f"
+        },
+        "-h": {
+          "flagName": "Read all item inside the adam libray with filter for only show the name file/folder.",
+          "dateUpdateForFlag": "11-04-2022__18-16-00",
+          "sysArgsNeed": "False",
+          "QuickExample": "adam.py -h"
+        },
+        "-su": {
+          "flagName": "Update/create exists flag inside system -> call the script with wanted flag and args , sw will auto insert/update.",
+          "dateUpdateForFlag": "11-04-2022__18-16-00",
+          "sysArgsNeed": "True",
+          "QuickExample": "False"
+        },
+        "-a": {
+          "flagName": "Create auto alias from adam framework",
+          "dateUpdateForFlag": "11-04-2022__18-16-00",
+          "sysArgsNeed": "True",
+          "QuickExample": "adam.py -a <AliasName> <AliasValue>"
+        }
+      }
+    }
+  },
+  "installDate": "11-04-2022__18-16-00",
+  "initWrite": true,
+  "pipList": [
+    "paramiko"
+  ]
+}
