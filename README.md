@@ -1,5 +1,5 @@
 # Adam Framework
-![GitHub tag (latest by date)](https://img.shields.io/github/v/tag/haymovich/adam?label=Last%20Tag%20Realase) ![GitHub commit activity](https://img.shields.io/github/commit-activity/w/haymovich/adam?style=flat-square) ![GitHub last commit](https://img.shields.io/github/last-commit/haymovich/adam?label=Last%20Commit&style=flat-square) ![GitHub](https://img.shields.io/github/license/haymovich/adam)
+![GitHub commit activity](https://img.shields.io/github/commit-activity/w/haymovich/adam?style=flat-square) ![GitHub last commit](https://img.shields.io/github/last-commit/haymovich/adam?label=Last%20Commit&style=flat-square) ![GitHub](https://img.shields.io/github/license/haymovich/adam)
 
 ## Requirements ❗️
 * Any linux base / mac pc.
