@@ -898,6 +898,7 @@ class Installer():
             if initCopy:
                 commandToCopy = f'sudo cp -r {fileThatWantToCopyTypeStr} {extractScriptFolder}'
                 logger().printLog(8, f'Command [{commandToCopy}]')
+                os.system(commandToCopy)
         else:
             logger().printLog(
                 2, f'File [{fileThatWantToCopyTypeStr}] is not exists , copy will no be made.')
