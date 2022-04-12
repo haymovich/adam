@@ -200,7 +200,8 @@ class Installer():
         self.nameBasicFolderToCreate = [
             'scripts_files',
             'json_files',
-            'adam_files'
+            'adam_files',
+            'logs',
         ]
         self.nameDiaryJson = 'diary.json'
         # ------- # Default attributes -> Path # ------- #
