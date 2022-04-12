@@ -1,5 +1,5 @@
 # Adam Framework
-![GitHub tag (latest SemVer pre-release)](https://img.shields.io/github/v/tag/haymovich/adam?include_prereleases&label=Last%20Release%20Tag)  ![GitHub commit activity](https://img.shields.io/github/commit-activity/w/haymovich/adam?style=flat-square) ![GitHub last commit](https://img.shields.io/github/last-commit/haymovich/adam?label=Last%20Commit&style=flat-square)
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/haymovich/adam?label=Last%20Release%20Official) ![GitHub tag (latest SemVer pre-release)](https://img.shields.io/github/v/tag/haymovich/adam?include_prereleases&label=Last%20Release%20Tag)  ![GitHub commit activity](https://img.shields.io/github/commit-activity/w/haymovich/adam?style=flat-square) ![GitHub last commit](https://img.shields.io/github/last-commit/haymovich/adam?label=Last%20Commit&style=flat-square) ![GitHub](https://img.shields.io/github/license/haymovich/adam)
 
 ## Requirements ❗️
 * Any linux base / mac pc.
