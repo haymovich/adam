@@ -71,8 +71,8 @@ adam -h
 adam -cts FileName
 ```
 * Example for copy : 
-<img width="1170" alt="image" src="https://user-images.githubusercontent.com/81128508/162971128-b5c7efef-ee93-426c-ab7a-5218afc12eca.png">
-<img width="1170" alt="image" src="https://user-images.githubusercontent.com/81128508/162971822-f40d2a8e-f781-4e56-a612-e7d2222a6022.png">
+![image](https://user-images.githubusercontent.com/81128508/162971128-b5c7efef-ee93-426c-ab7a-5218afc12eca.png)
+![image](https://user-images.githubusercontent.com/81128508/162971822-f40d2a8e-f781-4e56-a612-e7d2222a6022.png)
 
 #### Create alias with adam 🆕
 ```
@@ -85,7 +85,6 @@ adam -a AliasName AliasValue
 adam -c commandExample
 ```
 * Example for command : 
-![image](https://user-images.githubusercontent.com/81128508/162733623-6d66daac-9660-4d5e-bdb3-18b78c14fdcd.png)
 ![image](https://user-images.githubusercontent.com/81128508/162733694-120361f3-c7bf-49ed-83de-af8fbc9602f6.png)
 * You can insert command like :
 ```
@@ -99,6 +98,8 @@ adam -c -change commandExample
 ```
 adam -cr commandExample 
 ```
+* Example :
+![image](https://user-images.githubusercontent.com/81128508/162733623-6d66daac-9660-4d5e-bdb3-18b78c14fdcd.png)
 ### Git Manager 🕴
 #### Push to git with specific syntax
 * It'll push from exists folder.
