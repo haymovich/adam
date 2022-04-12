@@ -34,9 +34,9 @@ sudo ./adam.py -f
 ```
 cadam
 ```
-* If he'll find file then the alias will be fFileName
+* If he'll find file then the alias will be FileName
 ```
-fadam
+adam
 ```
 ## Usage 📝
 ### Adam 👨🏻‍💻
