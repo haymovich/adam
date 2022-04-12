@@ -48,14 +48,14 @@ adam -h
 * By Default , you can use all this scripts :
 * Repleace the # before if want to exec them
 ```
-#adam -a <AliasName> <AliasValue>
+#adam -a AliasName AliasValue
 #adam -f
 #adam -i
 #adam -su
+#adam -cts FileName
 #adam command.py -c Command
 #adam command.py -c -change Command
 #adam command.py -cr Command
-#adam createAliasForAdamFramework.py -a AliasName Alias Value
 #adam git_mannger.py -nt 1 Create new Tag Type Major
 #adam git_mannger.py -nt 2 Create new Tag Type Minor
 #adam git_mannger.py -nt 3 Create new Tag Type Patch
@@ -64,15 +64,16 @@ adam -h
 #adam testScriptExample.py 
 ```
 #### Dyamic Call other script from adam 🔎
-* Any script can be insert to adam libray ,First put the script inside the script_folder , you can revel this folder path by command :
+* Any script can be insert to adam libray.
+* You'll need to be inside the folder that the file you want to copy is located in.
+* You can activated the dynamic create with one command : 
 ```
-cscripts_files ; realpath .
+adam -cts FileName
 ```
-* Copy the wanted script to this folder.
-* Remap adam with new scripts
-```
-adam -f
-```
+* Example for copy : 
+<img width="1170" alt="image" src="https://user-images.githubusercontent.com/81128508/162971128-b5c7efef-ee93-426c-ab7a-5218afc12eca.png">
+<img width="1170" alt="image" src="https://user-images.githubusercontent.com/81128508/162971822-f40d2a8e-f781-4e56-a612-e7d2222a6022.png">
+
 #### Create alias with adam 🆕
 ```
 adam -a AliasName AliasValue
