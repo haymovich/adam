@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+from fileinput import filename
 from scripts_files.logger import logger
 import subprocess
 from pprint import pprint
@@ -145,6 +146,15 @@ argumentsHelpLocal(
     scriptNameAdam,
     pathScript,
     'python3',
+    '-cts',
+    'Copy and file to script folder , just insert the file name and adam will insert realpath of this script.',
+    False,
+    'adam.py -cts FileName'
+)
+argumentsHelpLocal(
+    scriptNameAdam,
+    pathScript,
+    'python3',
     '-su',
     'Update/create exists flag inside system -> call the script with wanted flag and args , sw will auto insert/update.',
     True,
@@ -189,12 +199,7 @@ class Installer():
         # ------- # Default attributes -> Names # ------- #
         self.nameBasicFolderToCreate = [
             'scripts_files',
-            'app_gui',
             'json_files',
-            'email_automation_main',
-            'logs',
-            'logs/LogRunHistoryFiles',
-            'logs/LogRunOutputFiles',
             'adam_files'
         ]
         self.nameDiaryJson = 'diary.json'
@@ -855,6 +860,48 @@ class Installer():
                     f'alias {aliasNameTypeStr}=', '').replace("'", '').strip()
         return foundAdamPathFromAlias
 
+    # ------- # Methods -> findLocationFromAlias # ------- #
+    def copyFilesToScriptsFolder(self, fileThatWantToCopyTypeStr: str):
+        """
+        Explain :
+            copy files to script folder
+        """
+        # init basic var
+        extractScriptFolder = os.path.join(
+            os.getcwd(), self.nameBasicFolderToCreate[0])
+        fileNameExtract = os.path.basename(fileThatWantToCopyTypeStr)
+        initCopy = True
+        # check if the file is exists
+        logger().printLog(
+            7, f'Check if file [{fileThatWantToCopyTypeStr}] is exists.', 'Checking')
+        if os.path.exists(fileThatWantToCopyTypeStr):
+            # check if the file is in the script folder
+            logger().printLog(
+                7, f'Check if file [{fileNameExtract}] is in scripts_folder.', 'Checking')
+            for dirs, folder, files in os.walk(extractScriptFolder):
+                if fileNameExtract in files:
+                    for eachFile in files:
+                        # if file is already inside the script
+                        if eachFile == fileNameExtract:
+                            logger().printLog(
+                                7, f'File [{eachFile}] is already in script folder , ', 'Duplication Error', 2)
+                            askUserToReplace = input(
+                                logger().printLog(7, f'Please approve this transaction by hit [1 to pass] / [Any other key to ignore] :', 'User Input', 1, returnTrueOrPrintFalseTypeBool=True))
+                            # pass
+                            if askUserToReplace == '1':
+                                initCopy = True
+                            else:
+                                initCopy = False
+                                logger().printLog(
+                                    6, f'For copy file [{fileNameExtract}]')
+
+            if initCopy:
+                commandToCopy = f'sudo cp -r {fileThatWantToCopyTypeStr} {extractScriptFolder}'
+                logger().printLog(8, f'Command [{commandToCopy}]')
+        else:
+            logger().printLog(
+                2, f'File [{fileThatWantToCopyTypeStr}] is not exists , copy will no be made.')
+
     # ------- # Methods -> copyLoggerToSystem # ------- #
     def copyLoggerToSystem(self):
         """
@@ -1429,6 +1476,14 @@ if __name__ == '__main__':
             gotoAdamFolder()
             print(str(Interpertor().searchFileFolderInDiaryFile(
                 sys.argv[2], sys.argv[3::])).replace('python3', '').replace('python', '').strip())
+        # ------- # Caller -> -cts # ------- #
+        # [ copy to script folder ] copy any file to script folder
+        if sys.argv[1] == '-cts':
+            # init basic var
+            extractRealPathFile = os.popen(
+                f'realpath {sys.argv[2]}').read().strip()
+            gotoAdamFolder()
+            Installer().copyFilesToScriptsFolder(extractRealPathFile)
         # ------- # Caller -> -c / -cr / -cu / -cru # ------- #
         if sys.argv[1] == '-c' or sys.argv[1] == '-cr' or sys.argv[1] == '-cu' or sys.argv[1] == '-cru':
             # chdir

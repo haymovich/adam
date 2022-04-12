@@ -85,7 +85,7 @@ class logger:
     ):
         """
         - Explain : 
-            - This method is for saving what happend in the run to a file.
+            - This method is for saving what happens in the run to a file.
             - 
         - TODO :
             - Not finish.
@@ -150,7 +150,7 @@ class logger:
             - statusInBracketTypeStr:
                 - What the status will be --> only work on level 7++
             - colorToPickTypeInt :
-                - What color will be instert --> only work on level 7++ :
+                - What color will be insert --> only work on level 7++ :
                     - 0 : white [default]
                     - 1 : blue
                     - 2 : red
@@ -297,7 +297,7 @@ class logger:
     def findAliasValue(self, aliasNameToFindTypeStr: str, silenceModeTypeBool=False):
         """
         - Explain :
-            - find adam script path from commnad alias
+            - find adam script path from command alias
         """
         # init basic var
         extractAllAlias = self.initCommand(

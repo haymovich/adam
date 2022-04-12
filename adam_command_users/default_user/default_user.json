@@ -1,3 +1,9 @@
 {
- "command": {}
+ "command": {
+  "command": {
+   "1": "cd ; pwd ; cd ../ ; pwd ",
+   "2": "cadam ; pwd",
+   "3": "ls -al"
+  }
+ }
 }
