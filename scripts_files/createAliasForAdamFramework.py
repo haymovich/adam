@@ -60,6 +60,10 @@ def extractTheRightSyntaxForAdamAutoAlias(aliasNameTypeStr: str, aliasValueTypeS
         if aliasValueTypeStr.endswith('.py'):
             logger().printLog(0, 'Python file has been detected , add auto python3 before alias value.')
             aliasValueVar = f'python3 {aliasValueVar}'
+        # check if the file is javascript
+        if aliasValueTypeStr.endswith('.js'):
+            logger().printLog(0, 'JavaScript file has been detected , add auto node before alias value.')
+            aliasValueVar = f'node {aliasValueVar}'
 
     # check if the alias value is folder
     elif '.' not in aliasNameVar:
