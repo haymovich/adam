@@ -145,10 +145,6 @@ def readAndModifyBashProfileFile(
 if __name__ == '__main__':
     logger().printLog(
         5, f'# // Script Name --> [{scriptName}]')
-    logger().printLog(
-        7, f'Sleep For 0.5 sec')
-    time.sleep(0.5)
-
     try:
         # ------- # Caller -> -p # ------- #
         # call alias auto mode for adam folder
