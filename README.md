@@ -7,13 +7,13 @@
 
 ## Interduction 📜
 ### Adam is a python linux workflow helper that able to :
-1. Call other script from anywhere on the pc.
-2. Insert pined command and call them from by one command.
+1. Call other script from anywhere on the pc with only one command.
+2. Create personal workflow with running pined commands.
 3. Create alias for Linux/Mac automatic.
-4. Git manger to push/create new tag with batter syntax.
+4. Git manger to push/create new tag with batter syntax / mange your github via command line.
 5. Logger script for batter readably.
 6. General improve workflow for user.
-The idea is put all script in one folder and call them by just one script , or pull personal command.
+### The idea is put all script in one folder and call them by just one script , or pull personal command , example will be show below.
 
 ## Installation 💻
 ### Go to folder that you want to install adam and run command :
