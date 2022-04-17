@@ -130,3 +130,5 @@ dmypy.json
 
 # adam
 *diary.json
+*testing.py
+*adam_command_users

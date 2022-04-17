@@ -281,6 +281,7 @@ class CommandReadWriteManager():
         commandFind = ''
         for eachCommand in splitCommandBySpace:
             findAliasValue = self.findAliasValue(eachCommand, True)
+            print(findAliasValue)
             if findAliasValue:
                 # check file
                 if os.path.isfile(findAliasValue):
@@ -318,6 +319,7 @@ class CommandReadWriteManager():
             print(
                 f'{dashLine}')
             for commandOrder, commandValue in sorted(readJsonCommand[commandKeyToExecCaller].items()):
+
                 commandValue = self.seekCommandInsideAlias(
                     str(commandValue).strip())
 
